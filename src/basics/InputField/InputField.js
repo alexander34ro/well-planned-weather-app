@@ -6,7 +6,6 @@ import assetMapping from '../../assets/assetMapping.json';
 const inputField = (props) => {
     return (
         <div className={classes.InputFieldWrapper}>
-            <label htmlFor={props.name}>{props.label}</label>
             <input
                 type={props.type}
                 id={props.name}

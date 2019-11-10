@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Footer.module.css';
-import Logo from '../../elements/Logo/Logo';
+import Logo from '../../basics/Logo/Logo';
 
 const footer = (props) => {
     return(

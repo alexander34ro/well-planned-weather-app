@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './WeatherDetails.module.css';
-import Icon from '../../elements/Icon/Icon';
+import Icon from '../../basics/Icon/Icon';
 import Temperature from './Temperature/Temperature';
 import Description from './Description/Description';
 import Date from './Date/Date';

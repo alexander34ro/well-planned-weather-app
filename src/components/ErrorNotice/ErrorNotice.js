@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './ErrorNotice.module.css';
-import Button from '../../elements/Button/Button';
+import Button from '../../basics/Button/Button';
 
 const errorNotice = (props) => {
     return(

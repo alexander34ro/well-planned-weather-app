@@ -1,8 +1,8 @@
 import React from 'react'
 
 import classes from './SearchBar.module.css';
-import InputField from '../../elements/InputField/InputField';
-import Button from '../../elements/Button/Button';
+import InputField from '../../basics/InputField/InputField';
+import Button from '../../basics/Button/Button';
 
 const searchBar = (props) => {
     return(
