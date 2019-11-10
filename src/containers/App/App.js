@@ -17,6 +17,22 @@ class App extends Component {
     error: false
   }
 
+  // Update state with current search bar input
+  searchBarHandler = (e) => {
+    this.setState({
+      searchBarInput: e.target.value
+    })
+  }
+
+  // Reset state after clicking on Logo or Try Again button
+  tryAgainHandler = () => {
+    this.setState({
+      searchBarInput: '',
+      weatherDetails: {},
+      error: false
+    })
+  }
+
   render() {
     return (
       <div className={classes.AppWrapper}>
