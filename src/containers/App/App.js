@@ -1,16 +1,29 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
-  );
+import { MoonLoader } from 'react-spinners';
+
+import classes from './App.module.css';
+import assetMapping from '../../assets/assetMapping.json';
+
+class App extends Component {
+
+  state = {
+    searchBarInput: '',
+    weatherDetails: {
+      temperature: null,
+      description: ''
+    },
+    loading: false,
+    error: false
+  }
+
+  render() {
+    return (
+      <div className={classes.AppWrapper}>
+        Planned Weather App
+      </div>
+    );
+  }
 }
 
 export default App;
