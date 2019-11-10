@@ -1,5 +1,5 @@
 # Well Planned React Weather App
-> React.js - Built with the [Open Weather API](https://openweathermap.org/api)
+Using React.js - Built with the [Open Weather API](https://openweathermap.org/api)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -12,7 +12,7 @@ Inspired by a nice article on Medium.
 ## Installation
 
 ```sh
-git clone https://github.com/
+git clone https://github.com/alexander34ro/well-planned-weather-app
 cd well-planned-weather-app
 npm install
 npm start
