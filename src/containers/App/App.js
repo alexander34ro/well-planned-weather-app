@@ -41,6 +41,45 @@ class App extends Component {
     })
   }
 
+  // Fetch weather information and update state
+  setWeather = () => {
+    const city = this.state.searchBarInput;
+    const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+    const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
+    const URL = API_URL + `?q=${city}&appid=${API_KEY}&units=metric`;
+    this.setState({
+      weatherDetails: {},
+      loading: true,
+      error: false
+    }, () => {
+      // Executed as callback function
+      fetch(URL)
+        .then(res => res.json())
+        .then(data => {
+          // If city exists, update weather details
+          if (data.cod === 200) {
+            this.setState({
+              weatherDetails: {
+                temperature: data.main.temp,
+                description: data.weather[0].main
+              },
+              loading: false
+            });
+          } else {
+            // If city doesn't exist, throw error
+            throw data.cod
+          }
+        })
+        .catch(err => {
+          console.log(err);
+          this.setState({
+            loading: false,
+            error: true
+          });
+        });
+    });
+  }
+
   render() {
     // Conditionally render card content
     let cardContent = <Preview />;
